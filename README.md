@@ -13,4 +13,4 @@ client max protocol = SMB3
 ```
 ### ReadyNAS Duo changes
 NFS protocol must be checked.
-![Screenshot 2024-04-07 180843](https://github.com/ejbaling/proxmox-install-and-maintenance/assets/3113782/a1448a1b-9a8b-4466-a245-1101a4018486)
+![Screenshot 2024-04-07 180843](https://github.com/ejbaling/proxmox-install-and-maintenance/assets/3113782/dae1f6a9-d01e-483a-b888-9cd967b14cae)
