@@ -29,4 +29,4 @@ mkdir /mnt/smb-share
 mount -t cifs //<server-ip>/<share-path> /<mount-point> -o vers=1.0,user=<username>
 Example: mount -t cifs //10.0.0.5/backup /smb-share -o vers=1.0,user=emmanuel
 ```
-Datastore creation could take a bit of time, 30% progress is about an hour.
+Datastore creation could take a bit of time, 30% progress is around 1 hour.
