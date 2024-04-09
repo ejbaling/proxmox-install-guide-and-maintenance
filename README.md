@@ -22,3 +22,10 @@ smbclient -L <ip address> -U <username>
 List of shares example:
 
 ![Screenshot 2024-04-07 180843](https://github.com/ejbaling/proxmox-install-and-maintenance/assets/3113782/999a4c8d-b6a8-4c00-b004-d29b134c73e7)
+
+### Mount an SMB Share
+```
+mkdir /mnt/smb-share
+mount -t cifs //<server-ip>/<share-path> /<mount-point> -o vers=1.0,user=<username>
+Example: mount -t cifs //10.0.0.5/backup /smb-share -o vers=1.0,user=emmanuel
+```
