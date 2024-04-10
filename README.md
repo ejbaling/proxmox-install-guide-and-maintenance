@@ -40,5 +40,26 @@ To check the mount
 ```
 mount -t cifs
 ```
+Add samba user credentials.
+```
+nano /etc/samba/.smbcreds
+```
+Set username and password.
+```
+username=smb-username
+password=smb-password
+```
+Save file and make it readable by root only.
+```
+chmod 400 /etc/samba/.smbcred
+```
+Auto-mount on boot by adding the following to /etc/fstab
+```
+//10.0.0.5/proxmox-backup /mnt/smb-share cifs credentials=/etc/samba/.smbcred,uid=34,gid=34,defaults 0 0
+```
+Issue this command to check
+```
+mount -a
+```
 In your Proxmox Backup Server UI, click Add Datastore then follow the on-screen steps.  
 Datastore creation could take a long time to complete, 30% progress is around 1 hour.
