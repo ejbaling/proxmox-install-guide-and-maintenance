@@ -55,7 +55,7 @@ chmod 400 /etc/samba/.smbcred
 ```
 Auto-mount on boot by adding the following to /etc/fstab
 ```
-//10.0.0.5/proxmox-backup /mnt/smb-share cifs credentials=/etc/samba/.smbcred,uid=34,gid=34,defaults 0 0
+//10.0.0.5/proxmox-backup /mnt/smb-share cifs credentials=/etc/samba/.smbcred,vers=1.0 0 0
 ```
 Issue this command to check
 ```
