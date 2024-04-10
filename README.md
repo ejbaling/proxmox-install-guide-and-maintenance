@@ -62,4 +62,9 @@ Issue this command to check
 mount -a
 ```
 In your Proxmox Backup Server UI, click Add Datastore then follow the on-screen steps.  
-Datastore creation could take a long time to complete, 30% progress is around 1 hour.
+Datastore creation could take a long time to complete, 30% progress is around 1 hour. This fails me twice.
+
+Use the CLI to create the datastore
+```
+proxmox-backup-manager datastore create proxmox-backup /mnt/smb-share
+```
