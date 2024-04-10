@@ -29,5 +29,9 @@ mkdir /mnt/smb-share
 mount -t cifs //<server-ip>/<share-path> /<mount-point> -o vers=1.0,user=<username>
 Example: mount -t cifs //10.0.0.5/backup /smb-share -o vers=1.0,user=emmanuel
 ```
+To check the mount
+```
+mount -t cifs
+```
 In your Proxmox Backup Server UI, click Add Datastore then follow the on-screen steps.  
 Datastore creation could take a long time to complete, 30% progress is around 1 hour.
