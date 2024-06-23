@@ -4,8 +4,8 @@ Proxmox install guide and maintenance.
 ## Making use of the entire disk after installation of your Proxmox Backup Server
 ```
 vgdisplay
-lvextend -l +100%FREE /dev/mapper/pbs/root
-resize2fs /dev/mapper/pbs/root
+lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 
 ## Remove Enterprise Repo and Nag Box on logon
