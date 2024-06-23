@@ -42,7 +42,7 @@ If you get the following error
 ```
 Protocol negotiation to server 10.0.0.5 (for a protocol between SMB2_02 and SMB3) failed: NT_STATUS_CONNECTION_DISCONNECTED
 ```
-
+Update smb.conf, see above.
 ### Mount an SMB Share and Create a Datastore using this path.
 ```
 mkdir /mnt/smb-share
