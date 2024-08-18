@@ -70,7 +70,11 @@ Auto-mount on boot by adding the following to /etc/fstab
 ```
 //10.0.0.5/proxmox-backup /mnt/smb-share cifs credentials=/etc/samba/.smbcred,vers=1.0 0 0
 ```
-Issue this command to check
+This is how it looks like
+
+ ![Screenshot 2024-08-18 132914](https://github.com/user-attachments/assets/c39eb7c3-e3e3-45c8-b76a-cac3b204b230)
+
+Issue this command to check. If there are no errors then is is OK.
 ```
 mount -a
 ```
