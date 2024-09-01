@@ -88,3 +88,7 @@ proxmox-backup-manager datastore create proxmox-backup /mnt/smb-share
 ## External USB Device as Datastore
 ### Create a Backup Operator User in Proxmox Backup Server
 https://4sysops.com/archives/proxmox-backup-server-install-and-configure/
+
+## TrueNAS Scale as Storage
+https://www.youtube.com/watch?v=VlqMVtuoPP8&t=800s
+
