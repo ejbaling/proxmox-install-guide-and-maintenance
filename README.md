@@ -92,3 +92,6 @@ https://4sysops.com/archives/proxmox-backup-server-install-and-configure/
 ## TrueNAS Scale as Storage
 https://www.youtube.com/watch?v=VlqMVtuoPP8&t=800s
 
+## Add new Hard Disk
+https://www.vinchin.com/vm-tips/proxmox-mount-disk.html
+
