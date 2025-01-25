@@ -126,3 +126,44 @@ Enter the following comand to pass thru disk to your VM:
 
 Make sure the checkbox next to the Backup is de-selected.
 ![Screenshot 2025-01-26 022131](https://github.com/user-attachments/assets/044d2b52-ca95-463a-b78f-84578049f4bc)
+
+Go to Proxmox Backup Server GUI. Take note of the new partition name.
+![Screenshot 2025-01-26 023512](https://github.com/user-attachments/assets/b3cdbe69-7d3f-46c4-ae27-748c1d28ede7)
+
+Mount the new partition
+
+```
+mkdir /mnt/hdd320gb
+mount -t ext4 /dev/vda1 /mnt/hdd320gb
+```
+
+Use the “fstab” file to set the hard drive to automatically mount at boot:
+```
+echo /dev/vda1 /mnt/hdd320gb ext4 defaults 1 2 >> /etc/fstab
+```
+
+Add Datastore from you Proxmox Backup Server. Add a backup user first.
+
+After setting up your pbs, go to Datacenter
+![Screenshot 2025-01-26 023512](https://github.com/user-attachments/assets/af0faedc-11ad-4aab-be96-0ad8a0a587f9)
+
+Select the Proxmox Backup Server from dropdown.
+![Screenshot 2025-01-26 024936](https://github.com/user-attachments/assets/a331e742-f62f-4c05-aa30-e3645620786f)
+
+Enter the following
+ID: proxmox-backup-server-2
+Server: <server-ip-address>
+Username: <backup-username>
+Password: <backup-password>
+Datastore: hdd320gb
+Fingerprint: <fingerprint>
+
+To get the PBS fingerprint, enter the command:
+```
+proxmox-backup-manager cert info
+```
+
+![Screenshot 2025-01-26 025353](https://github.com/user-attachments/assets/57de81c4-b91b-43b1-9edf-fe97cd8b915b)
+
+
+
