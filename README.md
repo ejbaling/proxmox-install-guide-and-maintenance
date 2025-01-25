@@ -95,3 +95,34 @@ https://www.youtube.com/watch?v=VlqMVtuoPP8&t=800s
 ## Add new Hard Disk
 https://www.vinchin.com/vm-tips/proxmox-mount-disk.html
 
+Check the device name of the hard drive to be added.
+![Screenshot 2025-01-25 233715](https://github.com/user-attachments/assets/659863f5-bb62-4633-94ad-c995393c88c2)
+
+Open a node shell and input the command:
+```
+fdisk /dev/sdb
+```
+
+Enter "d" to delete partions. Enter "n" to create a partition. Enter "w" to execute the opertion.
+
+Format the new partition:
+```
+mkfs -t ext4 /dev/sdb1
+```
+
+From this Youtube video https://youtu.be/U-UTMuhmC1U?si=t6fypsK7HUAqVNFi
+
+Enter the following command to get the device Id:
+```
+ls -n /dev/disk/by-id/
+```
+![Screenshot 2025-01-26 002459](https://github.com/user-attachments/assets/3054cd30-2596-45b8-a122-47c699e62666)
+
+Enter the following comand to pass thru disk to your VM:
+```
+/sbin/qm set 109 -virtio2 /dev/disk/by-id/ata-SAMSUNG_HD321HJ_S2GVJ9AZ813210
+```
+![Screenshot 2025-01-26 021927](https://github.com/user-attachments/assets/d06db27c-cd07-418d-a01c-1cc10c1d24e6)
+
+Make sure the checkbox next to the Backup is de-selected.
+![Screenshot 2025-01-26 022131](https://github.com/user-attachments/assets/044d2b52-ca95-463a-b78f-84578049f4bc)
